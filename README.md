@@ -1,4 +1,3 @@
-#ignore commit
 #SNIPPETS
 ====================
 A collection of possibly useful functions to avoid work duplicaton
