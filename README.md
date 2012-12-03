@@ -1,7 +1,7 @@
 #SNIPPETS
 ====================
 A collection of possibly useful functions to avoid work duplicaton
-and to provide a unique location to find helpers for future projects
+and to provide a unique location to find helpers for future projects ...
 
 ##LICENSE GPLv3
 ====================
