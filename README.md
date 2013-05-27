@@ -3,8 +3,6 @@
 A collection of possibly useful functions to avoid work duplicaton
 and to provide a unique location to find helpers for future projects ...
 
-test 
-
 ##LICENSE GPLv3
 ====================
 All files in this repository are GPLv3 licensed except if marked as
