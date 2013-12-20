@@ -27,7 +27,6 @@ char *pattern_replace(const char *str,
 	if(str == NULL)
 		return NULL; 
 
-	//check if there is a str to work with
 	slen = strlen(str);
 	if(0 == slen)
 		return NULL; 
