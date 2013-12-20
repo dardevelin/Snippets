@@ -22,19 +22,31 @@ char *pattern_replace(const char *str,
 	size_t occurrences;
 	size_t i, j;
 	char *new;
-	
+
+	//check if we really have a string to work on
+	if(str == NULL)
+		return NULL; 
+
 	//check if there is a str to work with
 	slen = strlen(str);
 	if(0 == slen)
 		return NULL; 
 	
 	//no pattern or no possible match
-	plen = strlen(pattern);
+	if(pattern == NULL)
+		plen = 0;
+	else
+		plen = strlen(pattern);
+
 	if(0 == plen || plen > slen )
 		return new = sstrndup(str, slen);
 	
 	//check if there is something to replace pattern with
-	rlen = strlen(replace);
+	if(replace == NULL)
+		rlen = 0;
+	else
+		rlen = strlen(replace);
+
 	if(0 == rlen)
 		return new = sstrndup(str,slen);
 	
