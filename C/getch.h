@@ -21,6 +21,12 @@
 #ifndef _SNIPPET_GETCH_H
 #define _SNIPPET_GETCH_H
 
+#if (defined _WIN32 || _WIN64 )
+#include <stdio.h>
+#include <conio.h>
+
+#else
+
 #include <stdio.h>
 #include <termios.h>
 #include <unistd.h>
