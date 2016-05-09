@@ -1,5 +1,5 @@
 /*
- * getch.h
+ * fstrchr.h
  * This file is part of snippets_collection
  *
  * Copyright (C) 2016 - Darcy Brás da Silva
