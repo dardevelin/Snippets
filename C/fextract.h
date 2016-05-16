@@ -29,8 +29,9 @@
  * found between 'start_pos' and 'end_pos' stream positions
  * returns NULL when it fails to allocate memory
  * FIXME: make it return NULL when errno is set by fseek
+ * FIXME: make it return NULL when EOF is reached
  */
-char *fextract(FILE **stream, const long start_pos, const long end_pos);
+char *fextract(const FILE *stream, const long start_pos, const long end_pos);
 
 #endif
 

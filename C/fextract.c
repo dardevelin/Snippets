@@ -21,11 +21,11 @@
 #include "fextract.h"
 
 
-char *fextract(FILE **stream, const long start_pos, const long end_pos)
+char *fextract(const FILE *stream, const long start_pos, const long end_pos)
 {
 	//FIXME check errno on fseek call and handle it
-	fseek(*stream, start, SEEK_SET);
-	long buf_len = end - start;
+	fseek(stream, start_pos, SEEK_SET);
+	long buf_len = end_pos - start_pos;
 
 	char *buf = NULL;
 	if(NULL == (buf = malloc(buf_len+sizeof('\0')))) {
@@ -39,7 +39,7 @@ char *fextract(FILE **stream, const long start_pos, const long end_pos)
 	buf[buf_len] = '\0';
 
 	for(iter=buf; buf_len--; ++iter) {
-		*iter=fgetc(*stream);
+		*iter=fgetc(stream);
 	}
 
 	return buf;
