@@ -20,14 +20,14 @@
 
 #include "fstrchr.h"
 
-long fstrchr(FILE **stream, const long pos, const int c)
+long fstrchr(FILE *stream, const long pos, const int c)
 {
-	fseek(*stream, pos, SEEK_SET);
+	fseek(stream, pos, SEEK_SET);
 	int ch = 0;
-	while(EOF != (ch = fgetc(*stream))) {
+	while(EOF != (ch = fgetc(stream))) {
 		if( c == ch ) {
-			ungetc(ch, *stream);
-			return ftell(*stream);
+			ungetc(ch, stream);
+			return ftell(stream);
 		}
 	}
 
