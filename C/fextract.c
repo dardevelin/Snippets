@@ -27,6 +27,11 @@ char *fextract(const FILE *stream, const long start_pos, const long end_pos)
 	fseek(stream, start_pos, SEEK_SET);
 	long buf_len = end_pos - start_pos;
 
+	if(0 >= buf_len) {
+		fprintf(stderr,"invalid extraction range\n");
+		return NULL;
+	}
+
 	char *buf = NULL;
 	if(NULL == (buf = malloc(buf_len+sizeof('\0')))) {
 		fprintf(stderr,"couldn't allocate memory for buffer\n");

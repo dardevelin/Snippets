@@ -28,6 +28,8 @@
 /* this function returns a new null terminated string with the contents
  * found between 'start_pos' and 'end_pos' stream positions
  * returns NULL when it fails to allocate memory
+ * returns NULL when range between 'start_pos' and 'end_pos' is <= 0
+ * 
  * FIXME: make it return NULL when errno is set by fseek
  * FIXME: make it return NULL when EOF is reached
  */
