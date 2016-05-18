@@ -35,6 +35,6 @@
  * FIXME: 
  * add return error for EOF cases
  */
-long fstrchr(FILE *stream, const long pos, const int c);
+long fstrchr(FILE * const stream, const long pos, const int c);
 
 #endif

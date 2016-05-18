@@ -21,7 +21,7 @@
 #include "fextract.h"
 
 
-char *fextract(const FILE *stream, const long start_pos, const long end_pos)
+char *fextract(FILE * const stream, const long start_pos, const long end_pos)
 {
 	//FIXME check errno on fseek call and handle it
 	fseek(stream, start_pos, SEEK_SET);
@@ -33,7 +33,8 @@ char *fextract(const FILE *stream, const long start_pos, const long end_pos)
 	}
 
 	char *buf = NULL;
-	if(NULL == (buf = malloc(buf_len+sizeof('\0')))) {
+	// +1 for the null terminator
+	if(NULL == (buf = malloc(buf_len+1))) {
 		fprintf(stderr,"couldn't allocate memory for buffer\n");
 		return NULL;
 	}

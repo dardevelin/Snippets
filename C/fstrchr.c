@@ -20,7 +20,7 @@
 
 #include "fstrchr.h"
 
-long fstrchr(FILE *stream, const long pos, const int c)
+long fstrchr(FILE * const stream, const long pos, const int c)
 {
 	fseek(stream, pos, SEEK_SET);
 	int ch = 0;

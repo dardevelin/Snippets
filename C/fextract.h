@@ -33,7 +33,7 @@
  * FIXME: make it return NULL when errno is set by fseek
  * FIXME: make it return NULL when EOF is reached
  */
-char *fextract(const FILE *stream, const long start_pos, const long end_pos);
+char *fextract(FILE * const stream, const long start_pos, const long end_pos);
 
 #endif
 
